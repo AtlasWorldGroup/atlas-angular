@@ -88,6 +88,7 @@ NOTE: Left/Right can be used together. Center must be used alone.
 Used as an element. Must be a child of an `atlas-command-{left/center/right}` element
 
 Possible attributes
+
 `title`: {string} Title to be shown on the hover event (tooltip)
 
 `icon`: {string} Font-Awesome icon
@@ -107,5 +108,3 @@ Possible attributes
   </atlas-nav>
 </div>
 ```
-
-
