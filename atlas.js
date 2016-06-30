@@ -115,6 +115,15 @@
       scope: {
         username: '=username',
         showCommand: '@showCommand',
+        logoUrl: '=logoUrl'
+      },
+      link: function ($scope, elem, attrs) {
+        if (!$scope.username) {
+          $scope.username = attrs.username;
+        }
+        if (!$scope.logoUrl) {
+          $scope.logoUrl = attrs.logoUrl;
+        }
       },
       controller: 'AtlasNavController'
     };
@@ -149,14 +158,15 @@
       restrict: 'E',
       templateUrl: 'template/navigation/command.html',
       scope: {
-        title: '@title',
-        text: '@text',
+        title: '=title',
+        text: '=text',
         icon: '@icon',
         clickEvent: '&clickEvent'
       },
       link: function ($scope, elem, attrs) {
-        $scope.title = attrs.title;
-        $scope.text = attrs.text;
+        if (!$scope.text) {
+          $scope.text = attrs.text;
+        }
         $scope.icon = attrs.icon;
       }
     };

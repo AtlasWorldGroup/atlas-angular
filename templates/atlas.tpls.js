@@ -189,7 +189,7 @@ angular.module('atlas.angular.navbar').run(['$templateCache', function ($templat
     "        </button>\n" +
     "        <a class=\"navbar-brand\">\n" +
     "          <div class=\"navbar-brand-name\">\n" +
-    "            <img class=\"brand-img\" src=\"/app/images/atlasnet-white.png\" />\n" +
+    "            <img class=\"brand-img\" ng-src=\"{{logoUrl}}\" />\n" +
     "            Change Tracking\n" +
     "          </div>\n" +
     "        </a>\n" +
@@ -262,7 +262,7 @@ angular.module('atlas.angular.navbar').run(['$templateCache', function ($templat
 angular.module('atlas.angular.navbar').run(['$templateCache', function ($templateCache) {
   'use strict';
   $templateCache.put('template/navigation/command.html',
-    "<li tooltip-placement=\"bottom\" uib-tooltip=\"{{title}}\">\n" +
+    "<li tooltip-placement=\"bottom\" uib-tooltip=\"{{title}}\" title=\"\">\n" +
     "  <a href=\"\" ng-click=\"clickEvent()\">\n" +
     "    <i class=\"fa fa-{{icon}}\"></i> {{text}}\n" + 
     "  </a>\n" +
