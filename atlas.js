@@ -115,7 +115,8 @@
       scope: {
         username: '=username',
         showCommand: '@showCommand',
-        logoUrl: '=logoUrl'
+        logoUrl: '=logoUrl',
+        appName: '=appName'
       },
       link: function ($scope, elem, attrs) {
         if (!$scope.username) {
@@ -123,6 +124,9 @@
         }
         if (!$scope.logoUrl) {
           $scope.logoUrl = attrs.logoUrl;
+        }
+        if (!$scope.appName) {
+          $scope.appName = attrs.appName;
         }
       },
       controller: 'AtlasNavController'

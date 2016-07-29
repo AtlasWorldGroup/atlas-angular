@@ -190,7 +190,7 @@ angular.module('atlas.angular.navbar').run(['$templateCache', function ($templat
     "        <a class=\"navbar-brand\">\n" +
     "          <div class=\"navbar-brand-name\">\n" +
     "            <img class=\"brand-img\" ng-src=\"{{logoUrl}}\" />\n" +
-    "            Change Tracking\n" +
+    "            {{appName}}\n" +
     "          </div>\n" +
     "        </a>\n" +
     "      </div>\n" +

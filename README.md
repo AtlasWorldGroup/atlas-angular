@@ -2,6 +2,13 @@
 
 Angular modules that help with the AtlasNet Standard
 
+### Setup
+```html
+<script src="public/lib/atlas-angular/atlas.js"></script>
+<script src="public/lib/atlas-angular/templates/atlas.tpls.js"></script>  
+```
+`atlas.tpls.js` depends on `atlas.js`, so must be loaded in first
+
 ### atlas.angular.filters
 
 `Directive` dateFilter: Parses a string to a supplied date format
@@ -79,6 +86,10 @@ Possible attributes
 
 `showCommand`: {boolean} (default: false) if true, will show command bar
 
+`logoUrl`: {string} location in which the logo is located
+
+`appName`: {string} name of the application (to be displayed in the navbar)
+
 ##### atlas-command-{left/center/right}
 Used as an element. Must be a child of an `atlas-nav` element
 
@@ -99,7 +110,7 @@ Possible attributes
 
 ```html
 <div class="navbar-fixed-top" ng-if="vm.authorization.firstLastName">
-  <atlas-nav username="vm.authorization.firstLastName" show-command="true">
+  <atlas-nav username="vm.authorization.firstLastName" show-command="true" logo-url="'/public/images/logo.png'" app-name="'Application X'">
     <atlas-command-right>
       <atlas-command title="Reset" icon="eraser" click-event="vm.reset()" text="Reset"></atlas-command>
       <atlas-command title="Get ID Info" icon="info-circle" click-event="vm.submit(vm.form.myForm.$valid, true)" text="Get ID Info"></atlas-command>
